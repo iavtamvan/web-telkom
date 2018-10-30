@@ -11,12 +11,13 @@ include 'config.php';
 if ($_POST) {
     $nama_user = $_POST['nama_user'];
     $wilayah_user = $_POST['wilayah_user'];
+    $datel_user = $_POST['datel_user'];
     $no_hp_user = $_POST['no_hp_user'];
     $username = $_POST['username_user'];
     $password = $_POST['password_user'];
 
-    $queryInsert = mysqli_query($db, "Insert into user_apps (nama_user, wilayah_user, no_hp_user, username_user, password_user, rule, status_user) 
-VALUE ('$nama_user', '$wilayah_user', '$no_hp_user', '$username', '$password', 'Teknisi', 'Aktif')");
+    $queryInsert = mysqli_query($db, "Insert into user_apps (nama_user, wilayah_user, datel_user, no_hp_user, username_user, password_user, rule, status_user) 
+VALUE ('$nama_user', '$wilayah_user', '$datel_user','$no_hp_user', '$username', '$password', 'Teknisi', 'Aktif')");
 
     if ($queryInsert){
         $responses["error_msg"] = "Daftar berhasil! Silahkan login";

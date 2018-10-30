@@ -695,21 +695,48 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                                                 </option>
                                                             </select>
                                                     </div>
+                                                    <?php
+
+
+
+
+                                                    ?>
+
                                                     <div class="form-group">
                                                         <label>Pilih Datel</label>
-                                                        <select class="form-control select2" style="width: 100%;" name="wilayah_user">
-                                                            <option name="wilayah_user" id="wilayah_user">Semarang
-                                                            </option>
-                                                            <option name="wilayah_user" id="wilayah_user">Yogyakarta
-                                                            </option>
-                                                            <option name="wilayah_user" id="wilayah_user">Solo</option>
-                                                            <option name="wilayah_user" id="wilayah_user">Kudus</option>
-                                                            <option name="wilayah_user" id="wilayah_user">Magelang
-                                                            </option>
-                                                            <option name="wilayah_user" id="wilayah_user">Purwokerto
-                                                            </option>
-                                                            <option name="wilayah_user" id="wilayah_user">Pekalongan
-                                                            </option>
+                                                        <select class="form-control select2" style="width: 100%;" name="datel_user">
+                                                            <option name="datel_user" id="wilayah_user">---- WITEL Semarang ----</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL KENDAL</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL KENDAL</option>
+                                                            <option name="datel_user" id="wilayah_user">---- WITEL Yogyakarta ----</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL BANTUL</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL SLEMAN</option>
+                                                            <option name="datel_user" id="wilayah_user">---- WITEL Solo ----</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL SRAGEN</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL WONOGIRI</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL KLATEN</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL SALATIGA</option>
+                                                            <option name="datel_user" id="wilayah_user">---- WITEL Kudus ----</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL BLORA</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL JEPARA</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL PATI</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL PURWODADI</option>
+                                                            <option name="datel_user" id="wilayah_user">---- WITEL Magelang ----</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL  KEBUMEN</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL MUNTILAN</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL PURWOREJO</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL TEMANGGUNG</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL WONOSOBO</option>
+                                                            <option name="datel_user" id="wilayah_user">---- WITEL Purwokerto ----</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL BANJARNEGARA</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL CILACAP</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL PURBALINGGA</option>
+                                                            <option name="datel_user" id="wilayah_user">---- WITEL Pekalongan ----</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL BATANG</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL BREBES</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL SLAWI</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL PEMALANG</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL TEGAL</option>
                                                         </select>
                                                     </div>
 
