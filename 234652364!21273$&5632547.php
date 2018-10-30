@@ -656,7 +656,7 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <form action="api/telkom_apps/controller/register_api.php"
+                                                        <form action="api/telkom_apps/controller/register_api_web.php"
                                                               method="post">
                                                             <div class="form-group">
 
