@@ -679,20 +679,13 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
 
                                                             <label>Pilih Witel</label>
                                                             <select class="form-control select2" style="width: 100%;" name="wilayah_user">
-                                                                <option name="wilayah_user" id="wilayah_user">Semarang
-                                                                </option>
-                                                                <option name="wilayah_user" id="wilayah_user">Yogyakarta
-                                                                </option>
-                                                                <option name="wilayah_user" id="wilayah_user">Solo
-                                                                </option>
-                                                                <option name="wilayah_user" id="wilayah_user">Kudus
-                                                                </option>
-                                                                <option name="wilayah_user" id="wilayah_user">Magelang
-                                                                </option>
-                                                                <option name="wilayah_user" id="wilayah_user">Purwokerto
-                                                                </option>
-                                                                <option name="wilayah_user" id="wilayah_user">Pekalongan
-                                                                </option>
+                                                                <option name="wilayah_user" id="wilayah_user">Semarang</option>
+                                                                <option name="wilayah_user" id="wilayah_user">Yogyakarta</option>
+                                                                <option name="wilayah_user" id="wilayah_user">Solo</option>
+                                                                <option name="wilayah_user" id="wilayah_user">Kudus</option>
+                                                                <option name="wilayah_user" id="wilayah_user">Magelang</option>
+                                                                <option name="wilayah_user" id="wilayah_user">Purwokerto</option>
+                                                                <option name="wilayah_user" id="wilayah_user">Pekalongan</option>
                                                             </select>
                                                     </div>
                                                     <?php
@@ -707,7 +700,7 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                                         <select class="form-control select2" style="width: 100%;" name="datel_user">
                                                             <option name="datel_user" id="wilayah_user">---- WITEL Semarang ----</option>
                                                             <option name="datel_user" id="wilayah_user">DATEL KENDAL</option>
-                                                            <option name="datel_user" id="wilayah_user">DATEL KENDAL</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL UNGARAN</option>
                                                             <option name="datel_user" id="wilayah_user">---- WITEL Yogyakarta ----</option>
                                                             <option name="datel_user" id="wilayah_user">DATEL BANTUL</option>
                                                             <option name="datel_user" id="wilayah_user">DATEL SLEMAN</option>
@@ -722,7 +715,7 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                                             <option name="datel_user" id="wilayah_user">DATEL PATI</option>
                                                             <option name="datel_user" id="wilayah_user">DATEL PURWODADI</option>
                                                             <option name="datel_user" id="wilayah_user">---- WITEL Magelang ----</option>
-                                                            <option name="datel_user" id="wilayah_user">DATEL  KEBUMEN</option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL KEBUMEN</option>
                                                             <option name="datel_user" id="wilayah_user">DATEL MUNTILAN</option>
                                                             <option name="datel_user" id="wilayah_user">DATEL PURWOREJO</option>
                                                             <option name="datel_user" id="wilayah_user">DATEL TEMANGGUNG</option>
