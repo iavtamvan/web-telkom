@@ -136,7 +136,7 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-right">
-                                    <a href="../../api/telkom_apps/controller/signout_api.php"
+                                    <a href="api/telkom_apps/controller/signout_api.php"
                                        class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
