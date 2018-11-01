@@ -230,7 +230,7 @@ if (!$nama) {
                                     echo "<td>";
 //                    echo "<a href='../../pages/forms/edit-berita.php?id_berita=".$siswa['id_berita']."'>Edit</a> ";
 //                    echo "<a href='../../controller/api-delete.php?id_berita=".$siswa['id_berita']."'>Hapus </a>";
-//                                    echo "<a href='../../api/telkom_apps/controller/delete_user.php?id_user=" . $ambil['id_user'] . "'>Hapus Teknisi | </a>";
+                                    echo "<a href='../../api/telkom_apps/controller/delete_user.php?id_user=" . $ambil['id_user'] . "'>Hapus Teknisi | </a>";
                                     echo "<a href='../../api/telkom_apps/controller/update_api.php?pindah=updateUserNonaktif&id_user=" . $ambil['id_user'] . "'>Nonaktif | </a>";
                                     echo "<a href='../../api/telkom_apps/controller/update_api.php?pindah=updateUserAktif&id_user=" . $ambil['id_user'] . "'>Aktifkan</a>";
 
