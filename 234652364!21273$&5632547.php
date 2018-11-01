@@ -1,7 +1,10 @@
 <?php
 session_start();
-
 include 'api/telkom_apps/controller/config.php';
+$nama= "" . $_SESSION["nama_user"];
+if (!$nama){
+    header('Location: ../../../pages/log/404.html');
+}
 $jumlahPoinKeseluruhan = mysqli_query($db, "SELECT SUM(total_point) AS total_point FROM user_apps;");
 $ambilTotalPoin = mysqli_fetch_assoc($jumlahPoinKeseluruhan);
 $jumlahPoin = "" . $ambilTotalPoin['total_point'];
@@ -47,6 +50,7 @@ $sumWilayahPekalongan = mysqli_query($db, "SELECT SUM(total_point) AS total_poin
 $ambilTotalPointPekalongan = mysqli_fetch_assoc($sumWilayahPekalongan);
 $ambilpointPekalongan = "" . $ambilTotalPointPekalongan['total_point'];
 $persenPekalongan = $ambilpointPekalongan / 100 * 100;
+
 
 
 ?>
