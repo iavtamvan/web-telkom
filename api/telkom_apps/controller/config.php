@@ -2,8 +2,8 @@
 
 $server = "localhost";
 $user = "root";
-$password = "";
-//$password = "Ar14V@123";
+//$password = "";
+$password = "Ar14V@123";
 $nama_database = "telkom_apps";
 
 $db = mysqli_connect($server, $user, $password, $nama_database);
