@@ -499,12 +499,15 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                                             <option name="datel_user" id="wilayah_user">---- WITEL
                                                                 Semarang ----
                                                             </option>
-                                                            <option name="datel_user" id="wilayah_user">DATEL KENDAL
+                                                            <option name="datel_user" id="wilayah_user">DATEL SEMARANG
+                                                            </option><option name="datel_user" id="wilayah_user">DATEL KENDAL
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">DATEL UNGARAN
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">---- WITEL
                                                                 Yogyakarta ----
+                                                            </option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL YOGYAKARTA
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">DATEL BANTUL
                                                             </option>
@@ -512,6 +515,8 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">---- WITEL Solo
                                                                 ----
+                                                            </option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL SOLO
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">DATEL SRAGEN
                                                             </option>
@@ -524,6 +529,8 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                                             <option name="datel_user" id="wilayah_user">---- WITEL Kudus
                                                                 ----
                                                             </option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL KUDUS
+                                                            </option>
                                                             <option name="datel_user" id="wilayah_user">DATEL BLORA
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">DATEL JEPARA
@@ -535,6 +542,8 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">---- WITEL
                                                                 Magelang ----
+                                                            </option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL MAGELANG
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">DATEL KEBUMEN
                                                             </option>
@@ -552,6 +561,9 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                                                 Purwokerto ----
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">DATEL
+                                                                PURWOKERTO
+                                                            </option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL
                                                                 BANJARNEGARA
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">DATEL CILACAP
@@ -561,6 +573,8 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">---- WITEL
                                                                 Pekalongan ----
+                                                            </option>
+                                                            <option name="datel_user" id="wilayah_user">DATEL PEKALONGAN
                                                             </option>
                                                             <option name="datel_user" id="wilayah_user">DATEL BATANG
                                                             </option>
