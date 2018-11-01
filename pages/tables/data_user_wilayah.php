@@ -44,8 +44,8 @@ if (!$nama) {
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="../../234652364!21273$&5632547.php" class="logo">             <!-- mini logo for sidebar mini 50x50 pixels --> <span
-                    class="logo-mini"><b>TEL</b>KOM</span>
+        <a href="../../234652364!21273$&5632547.php" class="logo">             <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>TEL</b>KOM</span>
             <!-- logo for regular state and mobile devices --> <span class="logo-lg"><b>INDIE</b>KU</span> </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -141,6 +141,18 @@ if (!$nama) {
 <!--                        <li><a href="../forms/caption_all.php"><i class="fa fa-circle-o"></i> Ubah Caption</a></li>-->
 <!--                    </ul>-->
 <!--                </li>-->
+                <li class="active treeview menu-open">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="active"><a href="../../234652364!21273$&5632547.php"><i class="fa fa-circle-o"></i>
+                                Dashboard</a></li>
+                    </ul>
+                </li>
                 <li class="treeview active">
                     <a href="#">
                         <i class="fa fa-table"></i> <span>Tables</span>
