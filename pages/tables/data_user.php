@@ -200,6 +200,7 @@ if (!$nama){
                                 <tr>
                                     <!--                                    <th>ID Teknisi</th>-->
                                     <th>Nama Teknisi</th>
+                                    <th>Username</th>
                                     <th>Wilayah</th>
                                     <th>No Hp</th>
                                     <th>Alur</th>
@@ -221,6 +222,7 @@ if (!$nama){
 
 //                                    echo "<td>" . $ambil['id_user'] . "</td>";
                                     echo "<td>" . $ambil['nama_user'] . "</td>";
+                                    echo "<td>" . $ambil['username_user'] . "</td>";
                                     echo "<td>" . $ambil['wilayah_user'] . "</td>";
                                     echo "<td>" . $ambil['no_hp_user'] . "</td>";
                                     echo "<td>" . $ambil['rule'] . "</td>";
@@ -246,6 +248,7 @@ if (!$nama){
                                 <tr>
                                     <!--                                    <th>#</th>-->
                                     <th>Nama Teknisi</th>
+                                    <th>Username</th>
                                     <th>Wilayah</th>
                                     <th>No Hp</th>
                                     <th>Alur</th>
