@@ -255,37 +255,63 @@ if (!$nama) {
                                 error_reporting(0);
                                 $bulan = $_POST['date'];
                                 $username = $_POST['username_user'];
+                                if ($_POST) {
+//$queryRead = mysqli_query($db, "Select * from user_apps where rule = 'Teknisi';");
+                                    $queryRead = mysqli_query($db, "select * from user_apps where MONTH(date) = '$bulan' || username_user = '$username';");
 
-                                //                $session_id = $_SESSION['id_user'];
-                                //                                $queryRead = mysqli_query($db, "Select * from user_apps where rule = 'Teknisi';");
-                                $queryRead = mysqli_query($db, "select * from user_apps where MONTH(date) = '$bulan' || username_user = '$username';");
-                                //                $ambil = mysqli_fetch_assoc($queryRead);
-
-                                while ($ambil = mysqli_fetch_array($queryRead)) {
-                                    echo "<tr>";
+                                    while ($ambil = mysqli_fetch_array($queryRead)) {
+                                        echo "<tr>";
 
 //                                    echo "<td>" . $ambil['id_user'] . "</td>";
-                                    echo "<td>" . $ambil['nama_user'] . "</td>";
-                                    echo "<td>" . $ambil['username_user'] . "</td>";
-                                    echo "<td>" . $ambil['password_user'] . "</td>";
-                                    echo "<td>" . $ambil['date'] . "</td>";
-                                    echo "<td>" . $ambil['wilayah_user'] . "</td>";
-                                    echo "<td>" . $ambil['no_hp_user'] . "</td>";
-                                    echo "<td>" . $ambil['rule'] . "</td>";
-                                    echo "<td>" . $ambil['total_point'] . "</td>";
-                                    echo "<td>" . $ambil['status_user'] . "</td>";
+                                        echo "<td>" . $ambil['nama_user'] . "</td>";
+                                        echo "<td>" . $ambil['username_user'] . "</td>";
+                                        echo "<td>" . $ambil['password_user'] . "</td>";
+                                        echo "<td>" . $ambil['date'] . "</td>";
+                                        echo "<td>" . $ambil['wilayah_user'] . "</td>";
+                                        echo "<td>" . $ambil['no_hp_user'] . "</td>";
+                                        echo "<td>" . $ambil['rule'] . "</td>";
+                                        echo "<td>" . $ambil['total_point'] . "</td>";
+                                        echo "<td>" . $ambil['status_user'] . "</td>";
 
-                                    echo "<td>";
-//                    echo "<a href='../../pages/forms/edit-berita.php?id_berita=".$siswa['id_berita']."'>Edit</a> ";
-//                    echo "<a href='../../controller/api-delete.php?id_berita=".$siswa['id_berita']."'>Hapus </a>";
-                                    echo "<a href='../../api/telkom_apps/controller/delete_user.php?id_user=" . $ambil['id_user'] . "'>Hapus Teknisi | </a>";
-                                    echo "<a href='../../api/telkom_apps/controller/update_api.php?pindah=updateUserNonaktif&id_user=" . $ambil['id_user'] . "'>Nonaktif | </a>";
-                                    echo "<a href='../../api/telkom_apps/controller/update_api.php?pindah=updateUserAktif&id_user=" . $ambil['id_user'] . "'>Aktifkan</a>";
+                                        echo "<td>";
+                                        echo "<a href='../../api/telkom_apps/controller/delete_user.php?id_user=" . $ambil['id_user'] . "'>Hapus Teknisi | </a>";
+                                        echo "<a href='../../api/telkom_apps/controller/update_api.php?pindah=updateUserNonaktif&id_user=" . $ambil['id_user'] . "'>Nonaktif | </a>";
+                                        echo "<a href='../../api/telkom_apps/controller/update_api.php?pindah=updateUserAktif&id_user=" . $ambil['id_user'] . "'>Aktifkan</a>";
 
-                                    echo "</td>";
+                                        echo "</td>";
 
-                                    echo "</tr>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    $queryRead = mysqli_query($db, "Select * from user_apps where rule = 'Teknisi';");
+//                                    $queryRead = mysqli_query($db, "select * from user_apps where MONTH(date) = '$bulan' || username_user = '$username';");
+
+                                    while ($ambil = mysqli_fetch_array($queryRead)) {
+                                        echo "<tr>";
+
+//                                    echo "<td>" . $ambil['id_user'] . "</td>";
+                                        echo "<td>" . $ambil['nama_user'] . "</td>";
+                                        echo "<td>" . $ambil['username_user'] . "</td>";
+                                        echo "<td>" . $ambil['password_user'] . "</td>";
+                                        echo "<td>" . $ambil['date'] . "</td>";
+                                        echo "<td>" . $ambil['wilayah_user'] . "</td>";
+                                        echo "<td>" . $ambil['no_hp_user'] . "</td>";
+                                        echo "<td>" . $ambil['rule'] . "</td>";
+                                        echo "<td>" . $ambil['total_point'] . "</td>";
+                                        echo "<td>" . $ambil['status_user'] . "</td>";
+
+                                        echo "<td>";
+                                        echo "<a href='../../api/telkom_apps/controller/delete_user.php?id_user=" . $ambil['id_user'] . "'>Hapus Teknisi | </a>";
+                                        echo "<a href='../../api/telkom_apps/controller/update_api.php?pindah=updateUserNonaktif&id_user=" . $ambil['id_user'] . "'>Nonaktif | </a>";
+                                        echo "<a href='../../api/telkom_apps/controller/update_api.php?pindah=updateUserAktif&id_user=" . $ambil['id_user'] . "'>Aktifkan</a>";
+
+                                        echo "</td>";
+
+                                        echo "</tr>";
+                                    }
                                 }
+
+
                                 ?>
 
 
