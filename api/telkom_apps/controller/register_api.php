@@ -20,8 +20,11 @@ if ($_POST) {
 VALUE ('$nama_user', '$wilayah_user', '$datel_user','$no_hp_user', '$username', '$password', 'Teknisi', 'Aktif')");
 
     if ($queryInsert){
+        $querryIdUser = mysqli_query($db, "SELECT * from apps_user where username_user = '$username'");
+        $pisahkanID = mysqli_fetch_assoc($querryIdUser);
+        $ambilIDUser = "".$pisahkanID['is_user'];
         $responses["error_msg"] = "Register berhasil! Silahkan login";
-
+        $responses["id_user"] = $pisahkanID;
         echo json_encode($responses);
 
     } else{
