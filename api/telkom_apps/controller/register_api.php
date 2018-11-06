@@ -22,7 +22,7 @@ VALUE ('$nama_user', '$wilayah_user', '$datel_user','$no_hp_user', '$username', 
     if ($queryInsert){
         $querryIdUser = mysqli_query($db, "SELECT * from user_apps where username_user = '$username'");
         $pisahkanID = mysqli_fetch_assoc($querryIdUser);
-        $ambilIDUser = "".$pisahkanID['is_user'];
+        $ambilIDUser = "".$pisahkanID['id_user'];
         $responses["error_msg"] = "Register berhasil! Silahkan login";
         $responses["id_user"] = $ambilIDUser;
         echo json_encode($responses);
