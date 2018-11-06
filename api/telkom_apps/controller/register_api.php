@@ -23,13 +23,13 @@ VALUE ('$nama_user', '$wilayah_user', '$datel_user','$no_hp_user', '$username', 
         $querryIdUser = mysqli_query($db, "SELECT * from user_apps where username_user = '$username'");
         $pisahkanID = mysqli_fetch_assoc($querryIdUser);
         $ambilIDUser = "".$pisahkanID['id_user'];
-        $responses["error_msg"] = "Register berhasil! Silahkan login";
+        $responses["error_msg"] = "Register berhasil!";
         $responses["id_user"] = $ambilIDUser;
         echo json_encode($responses);
 
     } else{
 
-        $responses["error_msg"] = "Register gagal!";
+        $responses["error_msg"] = "Register gagal! Pastikan username belum digunakan";
 
         echo json_encode($responses);
     }
