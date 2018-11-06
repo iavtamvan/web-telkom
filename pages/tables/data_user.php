@@ -207,6 +207,7 @@ if (!$nama) {
                                 <label>Bulan</label>
 
                                 <select class="form-control select2" style="width: 30%;" name="date">
+                                    <option name="date" value="1" id="1">----- Pilih Bulan -----</option>
                                     <option name="date" value="1" id="1">Januari</option>
                                     <option name="date" value="2" id="2">Februari</option>
                                     <option name="date" value="3" id="3">Maret</option>
