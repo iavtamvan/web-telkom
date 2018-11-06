@@ -1,8 +1,8 @@
 <?php
 session_start();
 include '../../api/telkom_apps/controller/config.php';
-$nama = "" . $_SESSION["nama_user"];
-if (!$nama) {
+$nama= "" . $_SESSION["nama_user"];
+if (!$nama){
     header('Location: ../../../pages/log/404.html');
 }
 ?>
@@ -51,8 +51,7 @@ if (!$nama) {
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="../../234652364!21273$&5632547.php" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels --> <span
+        <a href="../../234652364!21273$&5632547.php" class="logo">             <!-- mini logo for sidebar mini 50x50 pixels --> <span
                     class="logo-mini"><b>TEL</b>KOM</span>
             <!-- logo for regular state and mobile devices --> <span class="logo-lg"><b>INDIE</b>KU</span> </a>
         <!-- Header Navbar: style can be found in header.less -->
@@ -184,7 +183,7 @@ if (!$nama) {
         <section class="content-header">
             <h1>
                 Data Teknisi
-                <!--                <small>advanced tables</small>-->
+<!--                <small>advanced tables</small>-->
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -204,33 +203,26 @@ if (!$nama) {
                         <!-- /.box-header -->
                         <div class="box-body">
                             <form action="data_user.php" method="post">
-                                <label>Bulan</label>
-
-                                <select class="form-control select2" style="width: 30%;" name="date">
-                                    <option name="date" value="1" id="1">Januari</option>
-                                    <option name="date" value="2" id="2">Februari</option>
-                                    <option name="date" value="3" id="3">Maret</option>
-                                    <option name="date" value="4" id="4">April</option>
-                                    <option name="date" value="5" id="5">Mei</option>
-                                    <option name="date" value="6" id="6">Juni</option>
-                                    <option name="date" value="6" id="6">Juli</option>
-                                    <option name="date" value="8" id="8">Agustus</option>
-                                    <option name="date" value="9" id="9">September</option>
-                                    <option name="date" value="10" id="10">Oktober</option>
-                                    <option name="date" value="11" id="11">November</option>
-                                    <option name="date" value="12" id="12">Desember</option>
+                                <label>Pilih Bulan</label>
+                                <select class="form-control select2" style="width: 30%;"
+                                        name="wilayah_user">
+                                    <option name="wilayah_user" id="wilayah_user">Januari</option>
+                                    <option name="wilayah_user" id="wilayah_user">Februari</option>
+                                    <option name="wilayah_user" id="wilayah_user">Maret</option>
+                                    <option name="wilayah_user" id="wilayah_user">April</option>
+                                    <option name="wilayah_user" id="wilayah_user">Mei</option>
+                                    <option name="wilayah_user" id="wilayah_user">Juni</option>
+                                    <option name="wilayah_user" id="wilayah_user">Juli</option>
+                                    <option name="wilayah_user" id="wilayah_user">Agustus</option>
+                                    <option name="wilayah_user" id="wilayah_user">September</option>
+                                    <option name="wilayah_user" id="wilayah_user">Oktober</option>
+                                    <option name="wilayah_user" id="wilayah_user">November</option>
+                                    <option name="wilayah_user" id="wilayah_user">Desember</option>
                                 </select>
-
-                                <label>Username</label>
-
-                                <div class="input-group">
-                                    <input type="text" name="username_user" value="" placeholder="">
-                                </div>
                                 <div class="box-footer">
                                     <button type="submit" class="btn btn-primary">Cari</button>
                                 </div>
                             </form>
-
 
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
@@ -239,7 +231,6 @@ if (!$nama) {
                                     <th>Nama Teknisi</th>
                                     <th>Username</th>
                                     <th>Password</th>
-                                    <th>Tanggal</th>
                                     <th>Wilayah</th>
                                     <th>No Hp</th>
                                     <th>Alur</th>
@@ -252,13 +243,8 @@ if (!$nama) {
 
                                 <?php
                                 session_status();
-                                error_reporting(0);
-                                $bulan = $_POST['date'];
-                                $username = $_POST['username_user'];
-
                                 //                $session_id = $_SESSION['id_user'];
-                                //                                $queryRead = mysqli_query($db, "Select * from user_apps where rule = 'Teknisi';");
-                                $queryRead = mysqli_query($db, "select * from user_apps where MONTH(date) = '$bulan' || username_user = '$username';");
+                                $queryRead = mysqli_query($db, "Select * from user_apps where rule = 'Teknisi';");
                                 //                $ambil = mysqli_fetch_assoc($queryRead);
 
                                 while ($ambil = mysqli_fetch_array($queryRead)) {
@@ -268,7 +254,6 @@ if (!$nama) {
                                     echo "<td>" . $ambil['nama_user'] . "</td>";
                                     echo "<td>" . $ambil['username_user'] . "</td>";
                                     echo "<td>" . $ambil['password_user'] . "</td>";
-                                    echo "<td>" . $ambil['date'] . "</td>";
                                     echo "<td>" . $ambil['wilayah_user'] . "</td>";
                                     echo "<td>" . $ambil['no_hp_user'] . "</td>";
                                     echo "<td>" . $ambil['rule'] . "</td>";
@@ -296,7 +281,6 @@ if (!$nama) {
                                     <th>Nama Teknisi</th>
                                     <th>Username</th>
                                     <th>Password</th>
-                                    <th>Tanggal</th>
                                     <th>Wilayah</th>
                                     <th>No Hp</th>
                                     <th>Alur</th>
