@@ -24,7 +24,7 @@ VALUE ('$nama_user', '$wilayah_user', '$datel_user','$no_hp_user', '$username', 
         $pisahkanID = mysqli_fetch_assoc($querryIdUser);
         $ambilIDUser = "".$pisahkanID['is_user'];
         $responses["error_msg"] = "Register berhasil! Silahkan login";
-        $responses["id_user"] = $pisahkanID;
+        $responses["id_user"] = $ambilIDUser;
         echo json_encode($responses);
 
     } else{
