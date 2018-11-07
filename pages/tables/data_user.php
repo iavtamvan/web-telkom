@@ -317,21 +317,21 @@ if (!$nama) {
 
 
                                 </tbody>
-                                <tfoot>
-                                <tr>
-                                    <!--                                    <th>#</th>-->
-                                    <th>Nama Teknisi</th>
-                                    <th>Username</th>
-                                    <th>Password</th>
-                                    <th>Tanggal</th>
-                                    <th>Wilayah</th>
-                                    <th>No Hp</th>
-                                    <th>Alur</th>
-                                    <th>Poin</th>
-                                    <th>Status</th>
-                                    <th>Aksi</th>
-                                </tr>
-                                </tfoot>
+<!--                                <tfoot>-->
+<!--                                <tr>-->
+<!--                                    <!--                                    <th>#</th>-->-->
+<!--                                    <th>Nama Teknisi</th>-->
+<!--                                    <th>Username</th>-->
+<!--                                    <th>Password</th>-->
+<!--                                    <th>Tanggal</th>-->
+<!--                                    <th>Wilayah</th>-->
+<!--                                    <th>No Hp</th>-->
+<!--                                    <th>Alur</th>-->
+<!--                                    <th>Poin</th>-->
+<!--                                    <th>Status</th>-->
+<!--                                    <th>Aksi</th>-->
+<!--                                </tr>-->
+<!--                                </tfoot>-->
                             </table>
                         </div>
                         <!-- /.box-body -->
