@@ -170,7 +170,7 @@ if (!$nama) {
                     </a>
                     <ul class="treeview-menu">
 
-                        <li class="active"><a href="data_user.php"><i class="fa fa-circle-o"></i> Track Sharing</a></li>
+                        <li class="active"><a href="data_user.php"><i class="fa fa-circle-o"></i> Data Teknisi</a></li>
                     </ul>
                     <ul class="treeview-menu">
 
