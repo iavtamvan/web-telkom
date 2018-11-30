@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 include 'api/telkom_apps/controller/config.php';
 $nama= "" . $_SESSION["nama_user"];
 if (!$nama){
@@ -223,7 +224,10 @@ $persenPekalongan = $ambilpointPekalongan / 100 * 100;
                     <ul class="treeview-menu">
 
                         <li><a href="pages/tables/data_user.php"><i class="fa fa-circle-o"></i> Data Teknisi</a></li>
+                        <li><a href="pages/tables/data_share.php"><i class="fa fa-circle-o"></i> Track Sharing</a></li>
                     </ul>
+
+
                 </li>
 
             </ul>

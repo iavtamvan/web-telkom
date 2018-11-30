@@ -10,8 +10,11 @@ include 'config.php';
 if ($_POST){
     $iduser = $_POST['id_user'];
     $sosmed_name = $_POST['sosmed_name'];
+    $nama_user = $_POST['username'];
+    $img_url = $_POST['img_url'];
 
-    $queryInsert = mysqli_query($db, "INSERT INTO `telkom_apps`.`bukti_transaksi_user` (`id_user`, `point_user`, `sosmed_name`) VALUES ('$iduser', '1', '$sosmed_name');");
+    $queryInsert = mysqli_query($db, "INSERT INTO `telkom_apps`.`bukti_transaksi_user` (`id_user`, `username`, `point_user`, `sosmed_name`, `img_url`) 
+VALUES ('$iduser', '$username', '1', '$sosmed_name', '$img_url');");
 
     $sumPoint = mysqli_query($db, "SELECT SUM(point_user) AS total_point FROM bukti_transaksi_user WHERE id_user = '$iduser';");
     $ambilSum = mysqli_fetch_assoc($sumPoint);

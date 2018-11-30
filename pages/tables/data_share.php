@@ -1,18 +1,17 @@
 <?php
 session_start();
 include '../../api/telkom_apps/controller/config.php';
-$nama= "" . $_SESSION["nama_user"];
-if (!$nama){
+$nama = "" . $_SESSION["nama_user"];
+if (!$nama) {
     header('Location: ../../../pages/log/404.html');
 }
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TELKOM| Ubah Caption</title>
+    <title>TELKOM| Track Sharing</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -21,11 +20,20 @@ if (!$nama){
     <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +51,10 @@ if (!$nama){
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="../../234652364!21273$&5632547.php" class="logo">             <!-- mini logo for sidebar mini 50x50 pixels -->             <span class="logo-mini"><b>TEL</b>KOM</span>             <!-- logo for regular state and mobile devices -->             <span class="logo-lg"><b>INDIE</b>KU</span>         </a>
+        <a href="../../234652364!21273$&5632547.php" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels --> <span
+                    class="logo-mini"><b>TEL</b>KOM</span>
+            <!-- logo for regular state and mobile devices --> <span class="logo-lg"><b>INDIE</b>KU</span> </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
@@ -59,9 +70,12 @@ if (!$nama){
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs"><?php
+                            <span class="hidden-xs">
+                                <?php
                                 echo "" . $_SESSION["nama_user"];
-                                ?></span>
+                                //                                echo "".$_SESSION["nama_user"];
+                                ?>
+                            </span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -71,16 +85,19 @@ if (!$nama){
                                 <p>
                                     <?php
                                     echo "" . $_SESSION["nama_user"];
+                                    //                                echo "".$_SESSION["nama_user"];
                                     ?>
-                                    <small><?php
+                                    <small>
+                                        <?php
                                         echo "" . $_SESSION["no_hp_user"];
-                                        ?></small>
+                                        ?>
+
+                                    </small>
                                 </p>
-                            </li>
-                            <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-right">
-                                    <a href="../../api/telkom_apps/controller/signout_api.php" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="../../api/telkom_apps/controller/signout_api.php"
+                                       class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -133,20 +150,16 @@ if (!$nama){
                                 Dashboard</a></li>
                     </ul>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                     <a href="#">
                         <i class="fa fa-edit"></i> <span>Forms</span>
                         <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="caption_all.php"><i class="fa fa-circle-o"></i> Ubah Caption</a>
-                        </li>
-
-
+                        <li><a href="../forms/caption_all.php"><i class="fa fa-circle-o"></i> Ubah Caption</a></li>
                     </ul>
-
                 </li>
                 <li class="treeview active">
                     <a href="#">
@@ -157,13 +170,11 @@ if (!$nama){
                     </a>
                     <ul class="treeview-menu">
 
-                        <li class="active"><a href="../tables/data_user.php"><i class="fa fa-circle-o"></i> Data Teknisi</a>
-                        </li>
+                        <li class="active"><a href="data_user.php"><i class="fa fa-circle-o"></i> Track Sharing</a></li>
                     </ul>
                     <ul class="treeview-menu">
 
-                        <li class="active"><a href="../tables/data_share.php"><i class="fa fa-circle-o"></i> Track Sharing</a>
-                        </li>
+                        <li class="active"><a href="data_share.php"><i class="fa fa-circle-o"></i> Track Sharing</a></li>
                     </ul>
                 </li>
             </ul>
@@ -176,58 +187,156 @@ if (!$nama){
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Ubah Caption
-                <small>Preview</small>
+                Track Sharing
+                <!--                <small>advanced tables</small>-->
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Forms</a></li>
-                <li class="active">Caption</li>
+                <li><a href="#">Tables</a></li>
+                <li class="active">Track Sharing</li>
             </ol>
         </section>
 
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <!-- left column -->
-                <div class="col-md-6">
-                    <!-- Ubah Caption -->
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Caption</h3>
+                <div class="col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <!--                            <h3 class="box-title">Hover Data Table</h3>-->
                         </div>
                         <!-- /.box-header -->
-                        <!-- form start -->
-                        <form action="../../api/telkom_apps/controller/update_caption.php " method="post">
-                            <div class="box-body">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Caption Asli</label>
-                                    <p><?php
-                                        $queryBacaCaotionAsli = mysqli_query($db, "Select * from caption_apps");
-                                        $dataCaption = mysqli_fetch_assoc($queryBacaCaotionAsli);
-                                        $hasil = "" . $dataCaption['caption'];
-                                        echo $hasil;
-                                        ?></p>
-                                    <!--                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">-->
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Ganti Caption</label>
-                                    <input type="text" class="form-control" name="caption" placeholder="Caption baru">
-                                </div>
-                            </div>
-                            <!-- /.box-body -->
+                        <div class="box-body">
+                            <form action="data_share.php" method="post">
+<!--                                <label>Bulan</label>-->
 
-                            <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Simpan</button>
-                            </div>
-                        </form>
+
+<!--                                <select class="form-control select2" style="width: 30%;" name="date">-->
+<!--                                    <option name="date" value="1" id="1">----- Pilih Bulan -----</option>-->
+<!--                                    <option name="date" value="1" id="1">Januari</option>-->
+<!--                                    <option name="date" value="2" id="2">Februari</option>-->
+<!--                                    <option name="date" value="3" id="3">Maret</option>-->
+<!--                                    <option name="date" value="4" id="4">April</option>-->
+<!--                                    <option name="date" value="5" id="5">Mei</option>-->
+<!--                                    <option name="date" value="6" id="6">Juni</option>-->
+<!--                                    <option name="date" value="6" id="6">Juli</option>-->
+<!--                                    <option name="date" value="8" id="8">Agustus</option>-->
+<!--                                    <option name="date" value="9" id="9">September</option>-->
+<!--                                    <option name="date" value="10" id="10">Oktober</option>-->
+<!--                                    <option name="date" value="11" id="11">November</option>-->
+<!--                                    <option name="date" value="12" id="12">Desember</option>-->
+<!--                                </select>-->
+
+                                <label>Username</label>
+
+                                <div class="input-group">
+                                    <input type="text" name="username" value="" placeholder="">
+                                </div>
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-primary">Cari</button>
+                                </div>
+                            </form>
+
+
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <!--                                    <th>ID Teknisi</th>-->
+                                    <th>ID</th>
+                                    <th>Username</th>
+                                    <th>Sosmed</th>
+                                    <th>Poin</th>
+                                    <th>Image</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php
+                                session_status();
+                                error_reporting(0);
+//                                $bulan = $_POST['date'];
+                                $username = $_POST['username'];
+                                if ($_POST) {
+//$queryRead = mysqli_query($db, "Select * from user_apps where rule = 'Teknisi';");
+                                    $queryRead = mysqli_query($db, "select * from bukti_transaksi_user where username = '$username';");
+
+                                    while ($ambil = mysqli_fetch_array($queryRead)) {
+                                        echo "<tr>";
+
+//                                    echo "<td>" . $ambil['id_user'] . "</td>";
+                                        echo "<td>" . $ambil['id_user'] . "</td>";
+                                        echo "<td>" . $ambil['username'] . "</td>";
+                                        echo "<td>" . $ambil['sosmed_name'] . "</td>";
+                                        echo "<td>" . $ambil['point_user'] . "</td>";
+
+                                        echo "<td>";
+                                        echo "<img  width=200px height=150px src='" . $ambil['img_url'] . "'></img>";
+
+                                        echo "</td>";
+
+                                        echo "<td>";
+                                        echo "Shared</a>";
+
+                                        echo "</td>";
+
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    $queryRead = mysqli_query($db, "Select * from bukti_transaksi_user;");
+//                                    $queryRead = mysqli_query($db, "select * from user_apps where MONTH(date) = '$bulan' || username_user = '$username';");
+
+                                    while ($ambil = mysqli_fetch_array($queryRead)) {
+                                        echo "<tr>";
+
+//                                    echo "<td>" . $ambil['id_user'] . "</td>";
+                                        echo "<td>" . $ambil['id_user'] . "</td>";
+                                        echo "<td>" . $ambil['username'] . "</td>";
+                                        echo "<td>" . $ambil['sosmed_name'] . "</td>";
+                                        echo "<td>" . $ambil['point_user'] . "</td>";
+
+                                        echo "<td>";
+                                        echo "<img  width=200px height=150px src='" . $ambil['img_url'] . "'></img>";
+
+                                        echo "</td>";
+
+                                        echo "<td>";
+                                        echo "Shared</a>";
+
+                                        echo "</td>";
+
+                                        echo "</tr>";
+                                    }
+                                }
+
+
+                                ?>
+
+
+                                </tbody>
+<!--                                <tfoot>-->
+<!--                                <tr>-->
+<!--                                    <!--                                    <th>#</th>-->
+<!--                                    <th>Nama Teknisi</th>-->
+<!--                                    <th>Username</th>-->
+<!--                                    <th>Password</th>-->
+<!--                                    <th>Tanggal</th>-->
+<!--                                    <th>Wilayah</th>-->
+<!--                                    <th>No Hp</th>-->
+<!--                                    <th>Alur</th>-->
+<!--                                    <th>Poin</th>-->
+<!--                                    <th>Status</th>-->
+<!--                                    <th>Aksi</th>-->
+<!--                                </tr>-->
+<!--                                </tfoot>-->
+                            </table>
+                        </div>
+                        <!-- /.box-body -->
                     </div>
                     <!-- /.box -->
-
+                    <!-- /.box -->
                 </div>
-                <!--/.col (left) -->
-                <!-- right column -->
-                <!--/.col (right) -->
+                <!-- /.col -->
             </div>
             <!-- /.row -->
         </section>
@@ -437,16 +546,41 @@ if (!$nama){
     <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="../../bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="../../plugins/input-mask/jquery.inputmask.js"></script>
+<script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+    $(function () {
+        $('#example1').DataTable()
+        $('#example2').DataTable({
+            'paging': true,
+            'lengthChange': false,
+            'searching': false,
+            'ordering': true,
+            'info': true,
+            'autoWidth': false
+        })
+    })
+</script>
 </body>
 </html>
