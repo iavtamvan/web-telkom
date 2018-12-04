@@ -132,7 +132,7 @@ module.exports = function (grunt) { // jshint ignore:line
         + '* should be included in all pages. It controls some layout\n'
         + '* options and implements exclusive AdminLTE plugins.\n'
         + '*\n'
-        + '* @Author  Almsaeed Studio\n'
+        + '* @Author  Indiku\n'
         + '* @Support <https://www.almsaeedstudio.com>\n'
         + '* @Email   <abdullah@almsaeedstudio.com>\n'
         + '* @version <%= pkg.version %>\n'
