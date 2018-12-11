@@ -23,6 +23,7 @@ VALUES ('$iduser', '$username', '1', '$sosmed_name', '$img_url');");
     $updateUser = mysqli_query($db, "update user_apps set total_point = '$ambilSumTotal' where id_user = '$iduser'");
 
     $response["total_point"] = $ambilSumTotal;
+    $response["exe_update"] = $updateUser;
     echo json_encode($response);
 } else{
     $response["total_point"] = "Error";
