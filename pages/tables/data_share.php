@@ -208,24 +208,24 @@ if (!$nama) {
                         <!-- /.box-header -->
                         <div class="box-body">
                             <form action="data_share.php" method="post">
-<!--                                <label>Bulan</label>-->
+                                <label>Bulan</label>
 
 
-<!--                                <select class="form-control select2" style="width: 30%;" name="date">-->
-<!--                                    <option name="date" value="1" id="1">----- Pilih Bulan -----</option>-->
-<!--                                    <option name="date" value="1" id="1">Januari</option>-->
-<!--                                    <option name="date" value="2" id="2">Februari</option>-->
-<!--                                    <option name="date" value="3" id="3">Maret</option>-->
-<!--                                    <option name="date" value="4" id="4">April</option>-->
-<!--                                    <option name="date" value="5" id="5">Mei</option>-->
-<!--                                    <option name="date" value="6" id="6">Juni</option>-->
-<!--                                    <option name="date" value="6" id="6">Juli</option>-->
-<!--                                    <option name="date" value="8" id="8">Agustus</option>-->
-<!--                                    <option name="date" value="9" id="9">September</option>-->
-<!--                                    <option name="date" value="10" id="10">Oktober</option>-->
-<!--                                    <option name="date" value="11" id="11">November</option>-->
-<!--                                    <option name="date" value="12" id="12">Desember</option>-->
-<!--                                </select>-->
+                                <select class="form-control select2" style="width: 30%;" name="date">
+                                    <option name="upload_date" value="1" id="1">----- Pilih Bulan -----</option>
+                                    <option name="upload_date" value="1" id="1">Januari</option>
+                                    <option name="upload_date" value="2" id="2">Februari</option>
+                                    <option name="upload_date" value="3" id="3">Maret</option>
+                                    <option name="upload_date" value="4" id="4">April</option>
+                                    <option name="upload_date" value="5" id="5">Mei</option>
+                                    <option name="upload_date" value="6" id="6">Juni</option>
+                                    <option name="upload_date" value="6" id="6">Juli</option>
+                                    <option name="upload_date" value="8" id="8">Agustus</option>
+                                    <option name="upload_date" value="9" id="9">September</option>
+                                    <option name="upload_date" value="10" id="10">Oktober</option>
+                                    <option name="upload_date" value="11" id="11">November</option>
+                                    <option name="upload_date" value="12" id="12">Desember</option>
+                                </select>
 
                                 <label>Username</label>
 
@@ -247,6 +247,7 @@ if (!$nama) {
                                     <th>Sosmed</th>
                                     <th>Poin</th>
                                     <th>Image</th>
+                                    <th>Upload Date</th>
                                     <th>Status</th>
                                 </tr>
                                 </thead>
@@ -255,11 +256,10 @@ if (!$nama) {
                                 <?php
                                 session_status();
                                 error_reporting(0);
-//                                $bulan = $_POST['date'];
+                                $bulan = $_POST['upload_date'];
                                 $username = $_POST['username'];
                                 if ($_POST) {
-//$queryRead = mysqli_query($db, "Select * from user_apps where rule = 'Teknisi';");
-                                    $queryRead = mysqli_query($db, "select * from bukti_transaksi_user where username = '$username';");
+                                    $queryRead = mysqli_query($db, "select * from bukti_transaksi_user where MONTH(upload_date) = '$bulan' || username = '$username';");
 
                                     while ($ambil = mysqli_fetch_array($queryRead)) {
                                         echo "<tr>";
@@ -272,8 +272,9 @@ if (!$nama) {
 
                                         echo "<td>";
                                         echo "<img  width=200px height=150px src='" . $ambil['img_url'] . "'></img>";
-
                                         echo "</td>";
+
+                                        echo "<td>" . $ambil['upload_date'] . "</td>";
 
                                         echo "<td>";
                                         echo "Shared</a>";
@@ -282,7 +283,34 @@ if (!$nama) {
 
                                         echo "</tr>";
                                     }
-                                } else {
+                                }
+//                                else if ($_POST) {
+//                                    $queryRead = mysqli_query($db, "select * from bukti_transaksi_user where MONTH(upload_date) = '$bulan' and username = '$username';");
+//
+//                                    while ($ambil = mysqli_fetch_array($queryRead)) {
+//                                        echo "<tr>";
+//
+////                                    echo "<td>" . $ambil['id_user'] . "</td>";
+//                                        echo "<td>" . $ambil['id_user'] . "</td>";
+//                                        echo "<td>" . $ambil['username'] . "</td>";
+//                                        echo "<td>" . $ambil['sosmed_name'] . "</td>";
+//                                        echo "<td>" . $ambil['point_user'] . "</td>";
+//
+//                                        echo "<td>";
+//                                        echo "<img  width=200px height=150px src='" . $ambil['img_url'] . "'></img>";
+//                                        echo "</td>";
+//
+//                                        echo "<td>" . $ambil['upload_date'] . "</td>";
+//
+//                                        echo "<td>";
+//                                        echo "Shared</a>";
+//
+//                                        echo "</td>";
+//
+//                                        echo "</tr>";
+//                                    }
+//                                }
+                                else {
                                     $queryRead = mysqli_query($db, "Select * from bukti_transaksi_user;");
 //                                    $queryRead = mysqli_query($db, "select * from user_apps where MONTH(date) = '$bulan' || username_user = '$username';");
 
@@ -297,8 +325,9 @@ if (!$nama) {
 
                                         echo "<td>";
                                         echo "<img  width=200px height=150px src='" . $ambil['img_url'] . "'></img>";
-
                                         echo "</td>";
+
+                                        echo "<td>" . $ambil['upload_date'] . "</td>";
 
                                         echo "<td>";
                                         echo "Shared</a>";
